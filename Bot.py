@@ -86,3 +86,13 @@ async def start(
             "Please enter your message: (text, file, picture)"
         )
     await update.effective_message.reply_text(text)
+
+
+async def handle_message(
+        update: Update,
+        context: ContextTypes.DEFAULT_TYPE, 
+):
+    message = update.effective_message
+    chat = update.effective_chat
+    if message is None or chat is None:
+        return
