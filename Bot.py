@@ -96,3 +96,6 @@ async def handle_message(
     chat = update.effective_chat
     if message is None or chat is None:
         return
+
+    if chat.type != ChatType.PRIVATE:
+        return
