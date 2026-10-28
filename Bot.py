@@ -67,3 +67,22 @@ def get_sender(owner_message_id: int):
             (owner_message_id,),
         ).fetchone()
     return row[0] if row else None
+
+
+async def start(
+        update: Update,
+        context: ContextTypes.DEFAULT_TYPE, 
+):
+    chat_id = update.effective_chat.id
+    if chat_id == OWNER_ID:
+        text = (
+            "Anon box message is active.\n"
+            "Reply to any messages to answer the messager."
+        )
+    else:
+        text = (
+            "Welcome to Nazanin(Leonika)s bot.\n"
+            "Your message will be sent anonymously.\n"
+            "Please enter your message: (text, file, picture)"
+        )
+    await update.effective_message.reply_text(text)
