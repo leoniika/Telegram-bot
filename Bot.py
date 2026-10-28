@@ -45,3 +45,15 @@ def init_db():
                 sender_chat_id INTEGER NOT NULL
             )
         """)
+
+
+def save_messages(owner_message_id: int, sender_chat_id: int):
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO messages
+            (owner_message_id, sender_chat_id)
+            VALUES (?, ?)
+            """,
+            (owner_message_id, sender_chat_id),
+        )
