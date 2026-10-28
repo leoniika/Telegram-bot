@@ -14,6 +14,7 @@ from telegram.ext import (
     filters
 )
 
+
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = os.getenv("OWNER_ID")
@@ -22,3 +23,8 @@ if not BOT_TOKEN or not OWNER_ID:
     raise RuntimeError("BOT_TOKEN or OWNER_ID are not set.")
 
 OWNER_ID = int(OWNER_ID)
+
+
+DATA_AIR = Path(os.getenv("DATA_AIR", str(Path(__file__).parent)))
+DATA_AIR.mkdir(parents=True, exist_ok=True)
+DB_PATH = DATA_AIR / "massages.db"
