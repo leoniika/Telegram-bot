@@ -28,3 +28,10 @@ OWNER_ID = int(OWNER_ID)
 DATA_AIR = Path(os.getenv("DATA_AIR", str(Path(__file__).parent)))
 DATA_AIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = DATA_AIR / "massages.db"
+
+
+logging.basicConfig(
+    format = "%(asctime)s - %(levelname)s - %(message)s",
+    level = logging.INFO,
+)
+logging.getLogger("httpsx").setLevel(logging.WARNING)
