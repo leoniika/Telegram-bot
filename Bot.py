@@ -57,3 +57,13 @@ def save_messages(owner_message_id: int, sender_chat_id: int):
             """,
             (owner_message_id, sender_chat_id),
         )
+
+
+def get_sender(owner_message_id: int):
+    with sqlite3.connect(DB_PATH) as conn:
+        row = conn.execute(
+            "SELECT sender_chat_id FROM messages "
+            "WHERE owner_message_id = ?",
+            (owner_message_id,),
+        ).fetchone()
+    return row[0] if row else None
