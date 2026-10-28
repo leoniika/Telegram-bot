@@ -152,3 +152,18 @@ async def handle_message(
         logging.exception("Could not deliver an anonymous message.")
         await message.reply_text(
             "Couldn't deliver the reply. Please try again in few minutes later.")
+
+
+def main():
+    init_db()
+
+    app = Application.builder().token(BOT_TOKEN).build()
+    app.handler(CommandHandler("start", start))
+    app.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, handle_message))
+
+    logging.info("Bot is starting.")
+    app.run_polling()
+
+
+if __name__ == "__main__":
+    main()
