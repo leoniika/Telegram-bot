@@ -1,0 +1,19 @@
+[33mb72ac6e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m update
+[33mcb2c4cf[m Create Requerements.txt
+[33m68d3e22[m Delete Requerements.text
+[33mbbf8030[m Libraries
+[33m892c5d7[m main()
+[33m7612f87[m Bots behavior in Telegram
+[33m3c94280[m Only work in private chats
+[33m9f8fabe[m Primary function of the bot
+[33m9d777a6[m Bots fonction
+[33ma93fd2f[m Replying to sender
+[33m7fdf27e[m Making record
+[33m85b67b5[m SQlite schema
+[33m6467400[m Log config
+[33m1433bfe[m Setting up path for DB
+[33m11bbd52[m Reading info
+[33m48a3154[m Update Bot.py
+[33m81f31e2[m Importing external libraries
+[33m96fe262[m Importing py standard libraries
+[33md9378f0[m Start of the project

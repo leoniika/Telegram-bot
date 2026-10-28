@@ -1,4 +1,5 @@
-*.txt
+requirements.txt
+help.txt
 .env
 .venv/
 __pycache__/
