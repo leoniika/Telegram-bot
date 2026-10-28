@@ -35,3 +35,13 @@ logging.basicConfig(
     level = logging.INFO,
 )
 logging.getLogger("httpsx").setLevel(logging.WARNING)
+
+
+def init_db():
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS messages (
+                owner_message_id INTEGER PRIMARY KEY,
+                sender_chat_id INTEGER NOT NULL
+            )
+        """)
