@@ -99,3 +99,56 @@ async def handle_message(
 
     if chat.type != ChatType.PRIVATE:
         return
+
+    if chat.id == OWNER_ID:
+        replied = message.reply_to_message
+        if replied is None:
+            return
+
+    sender_id = get_sender(replied.message_id)
+    if sender_id is None:
+        await message.reply_text("Couldn't find the sender.")
+        return
+
+    try:
+        await context.bot.copy_message(
+            chat_id = sender_id,
+            from_chat_id = OWNER_ID,
+            message_id = message.message_id,
+        )
+        await message.reply_text("Message sent.")
+
+    except Exception:
+        logging.exception("Could not deliver the reply.")
+        await message.reply_text(
+                "Couldn't deliver the reply."
+        )
+    return
+
+    supported = (
+        message.text is not None
+        or bool(message.photo)
+        or message.document is not None
+    )
+    if not supported:
+        await message.reply_text("Only text, pictue or file is acceptable.")
+        return
+
+    try:
+        copied = await context.bot.copy_message(
+            chat_id = OWNER_ID,
+            from_chat_id = chat.id,
+            message_id = message.message_id,
+        )
+
+        save_message(copied.message_id, chat.id)
+
+        await message.reply_text(
+            "Your message it sent.\n"
+            "If I reply to your message you'll receave it here."
+        )
+
+    except Exception:
+        logging.exception("Could not deliver an anonymous message.")
+        await message.reply_text(
+            "Couldn't deliver the reply. Please try again in few minutes later.")
