@@ -13,3 +13,12 @@ from telegram.ext import (
     MessageHandler,
     filters
 )
+
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OWNER_ID = os.getenv("OWNER_ID")
+
+if not BOT_TOKEN or not OWNER_ID:
+    raise RuntimeError("BOT_TOKEN or OWNER_ID are not set.")
+
+OWNER_ID = int(OWNER_ID)
