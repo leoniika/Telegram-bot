@@ -1,5 +1,4 @@
-requirements.txt
-help.txt
+*.txt
 .env
 .venv/
 __pycache__/
