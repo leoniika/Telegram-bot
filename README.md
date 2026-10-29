@@ -1,6 +1,8 @@
 # Telegram bot with python
 
-[English](#english) | [فارسی](#فارسی)
+[Induction](#english) | [پیشگفتار ](#فارسی)
+
+## Induction
 
 A simple Telegram bot that allows users to send anonymous messages to the bot owner. Users can send text messages, pictures, and files without their Telegram identity being shared directly with the owner.
 
@@ -57,8 +59,9 @@ This project was an exercise for me to work with Python, SQLite and Git, acting 
 
 ---
 
-# بات تلگرام با پایتون 
-## فارسی
+# بات تلگرام با پایتون
+
+## پیشگفتار
 
 یک ربات ساده که به کاربرها اجازه میده که به سازنده ی ربات به شکل ناشناس پیام ارسال کنن. کابرها میتونن متن، عکس و فایل به ربات ارسال کنن بدون اینکه اسم فرستنده مستقیما برای سازنده ی ربات نمایش داده بشه.
 
