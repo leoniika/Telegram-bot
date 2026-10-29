@@ -1,6 +1,6 @@
 # Telegram bot with python
 
-[English](#Telegram bot with python) | [فارسی](#بات تلگرام با پایتون)
+[English](Telegram bot with python) | [فارسی](بات تلگرام با پایتون)
 
 A simple Telegram bot that allows users to send anonymous messages to the bot owner. Users can send text messages, pictures, and files without their Telegram identity being shared directly with the owner.
 
