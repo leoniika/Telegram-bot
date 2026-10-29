@@ -1,6 +1,6 @@
 # Telegram bot with python
 
-[Induction](#english) | [پیشگفتار ](#فارسی)
+[English](#Induction) | [فارسی](#پیشگفتار)
 
 ## Induction
 
