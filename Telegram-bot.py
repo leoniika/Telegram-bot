@@ -158,7 +158,7 @@ def main():
     init_db()
 
     app = Application.builder().token(BOT_TOKEN).build()
-    app.handler(CommandHandler("start", start))
+    app.handlers(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, handle_message))
 
     logging.info("Bot is starting.")
