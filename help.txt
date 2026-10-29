@@ -1,0 +1,4 @@
+requirements.txt -> some infos for this minor project
+.env folder -> has private configs
+.gitignore forlder -> GitHub ignore these files
+bot.py -> main code  
