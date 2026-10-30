@@ -81,9 +81,9 @@ async def start(
         )
     else:
         text = (
-            "Welcome to Nazanin(Leonika)s bot.\n"
+            "Welcome to my envoy bot. 🙋🏻‍♀️ \n"
             "Your message will be sent anonymously.\n"
-            "Please enter your message: (text, file, picture)"
+            "Please enter your message: (text, file or picture)"
         )
     await update.effective_message.reply_text(text)
 
