@@ -57,6 +57,10 @@ The bot will start listening for Telegram messages.
 
 This project was an exercise for me to work with Python, SQLite and Git, acting as an initial stepping stone for the start of my workflow. 👩🏻‍💻🎀
 
+## Extra: About deployment
+
+The bot can be run locally on your computer for development and testing, or deployed to a remote server or hosting platform to keep it running continuously.
+
 ---
 
 # بات تلگرام با پایتون
@@ -115,3 +119,7 @@ python Bot.py
 ## هدفم از انجام این پروژه
 
 این پروژه تمرینی بود برای من که از گیت، پایتون و SQLite استفاده کنم برای شروعی برای روند کد زدنم. 👩🏻‍💻🎀
+
+## بیشتر: درباره ی جایگیری
+
+این ربات را میتوان به‌صورت محلی روی سیستم اجرا کرد یا برای فعالیت مداوم روی یک سرور یا پلتفرم میزبانی (Hosting) برپا کرد.
