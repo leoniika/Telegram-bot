@@ -132,7 +132,7 @@ async def handle_message(
     )
 
     if not supported:
-        await message.reply_text("Only text, pictures, or files are accepted.")
+        await message.reply_text("Only text, pictures, or files are acceptable.")
         return
 
     try:
@@ -145,8 +145,8 @@ async def handle_message(
         save_messages(copied.message_id, chat.id)
 
         await message.reply_text(
-            "Your message was sent.\n"
-            "If I reply to your message, you'll receive it here.")
+            "Message sent.\n"
+            "If I reply to your message, you'll receive it here. 💁🏻‍♀️")
 
     except Exception:
         logging.exception("Could not deliver message.")
